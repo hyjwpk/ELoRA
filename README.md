@@ -1,12 +1,8 @@
 # [ICML 2025] ELoRA: Low-Rank Adaptation for Equivariant GNNs
 
-This repository contains the implementation of our ICML 2025 paper:
+[**Paper**](https://proceedings.mlr.press/v267/wang25al.html) | [**Poster**](https://icml.cc/virtual/2025/poster/44404)
 
-> **ELoRA: Low-Rank Adaptation for Equivariant GNNs**
-> 
-> Chen Wang, Siyu Hu, Guangming Tan, Weile Jia
-
-The code is built upon the [e3nn](https://github.com/e3nn/e3nn) library and the [MACE](https://github.com/ACEsuit/mace) framework.
+**ELoRA** is a parameter-efficient fine-tuning method for equivariant graph neural networks that preserves SO(3) equivariance. It extends e3nn with equivariant low-rank adaptations that can be integrated into equivariant models built with e3nn.
 
 ## Installation
 
@@ -68,7 +64,7 @@ For the Pytorch version, use the appropriate version for your CUDA version.
 
 **Baseline and ELoRA share the same command-line interface and training scripts.** To reproduce different results, simply **switch the active conda environment** (e.g., mace_baseline or mace_elora) before running the training commands.
 
-For details on how to use **MACE**, please refer to the [official MACE README](https://github.com/hyjwpk/ELoRA/tree/MACE_baseline). Here, we provide the configurations used to reproduce the results reported in our ICML 2025 paper.
+For details on how to use **MACE**, please refer to the [MACE README in our baseline branch](https://github.com/hyjwpk/ELoRA/tree/MACE_baseline). Here, we provide the configurations used to reproduce the results reported in our ICML 2025 paper.
 
 ### Inorganic
 
@@ -108,7 +104,7 @@ mace_run_train \
     --device=cuda \
     --seed=123 \
     --clip_grad=100 \
-    --save_cpu 
+    --save_cpu
 ```
 
 ### Organic
@@ -143,23 +139,25 @@ mace_run_train \
     --default_dtype="float64"\
     --device=cuda \
     --seed=123 \
-    --save_cpu 
+    --save_cpu
 ```
 
 You may adjust the hyperparameters or input files to suit your specific dataset or evaluation setting.
 
 ## Citation
 
-The paper is available at https://openreview.net/forum?id=hcoxm3Vwgy&noteId=xEsvYXshHD
-
 If you find this work useful, please consider citing:
 
 ```bibtex
-@inproceedings{wang2025elora,
-  title={ELoRA: Low-Rank Adaptation for Equivariant GNNs},
+@inproceedings{pmlr-v267-wang25al,
+  title={{ELoRA}: Low-Rank Adaptation for Equivariant {GNN}s},
   author={Wang, Chen and Hu, Siyu and Tan, Guangming and Jia, Weile},
-  booktitle={International Conference on Machine Learning},
-  year={2025}
+  booktitle={Proceedings of the 42nd International Conference on Machine Learning},
+  pages={63113--63135},
+  year={2025},
+  volume={267},
+  series={Proceedings of Machine Learning Research},
+  publisher={PMLR},
+  url={https://proceedings.mlr.press/v267/wang25al.html}
 }
 ```
-
