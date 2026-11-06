@@ -4,6 +4,8 @@
 
 **ELoRA** is a parameter-efficient fine-tuning method for equivariant graph neural networks that preserves SO(3) equivariance. It extends e3nn with equivariant low-rank adaptations that can be integrated into equivariant models built with e3nn.
 
+![Overview of ELoRA and its equivariant low-rank adaptation](docs/assets/elora.png)
+
 ## Installation
 
 The installation procedure is **based on the official setup of** [**MACE**](https://github.com/ACEsuit/mace), with modifications to support our ELoRA modules. We recommend using [**conda**](https://docs.conda.io/) to manage the environment.
